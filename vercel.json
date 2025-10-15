@@ -5,6 +5,8 @@
     { "src": "dist/**/*", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "^/$", "dest": "dist/index.html" },
+    { "src": "^/(about|services|global|imprint)/?$", "dest": "dist/$1.html" },
     { "src": "/(.*)", "dest": "dist/$1" }
   ]
 }
